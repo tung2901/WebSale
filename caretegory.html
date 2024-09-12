@@ -60,26 +60,92 @@
 
 
     </header>
-    <section id="Slider">
-        <div class="aspect-ratio-169">
-            <img src="./img/8f14e7856aef05f6b83e3a41ec7d7db5.webp.png" alt="">
-            <img src="./img/1d06b7d395e4e8a875357c290ac7cda5.png" alt="">
+    <!-- caretogy -->
+    <section class="cartegory">
+        <div class="container">
+            <div class="caregory-top row">
+                <p>Trang chủ</p> <span>&#10230;</span>
+                <p>NỮ</p> <span>&#10230;</span>
+                <p>Hàng nữ mới về</p>
+            </div>
         </div>
-        <div class="dot-container">
-            <div class="dot active"></div>
-            <div class="dot"></div>
+        <div class="container">
+            <div class="row">
+                <div class="cartegory-left">
+                    <ul>
+                        <li class="cartegory-left-li"> <a href="#">Nữ</a>
+                            <ul>
+                                <li><a href="">Hàng Nữ</a></li>
+                                <li> <a href="">Nam</a> </li>
+                                <li> <a href="">BEYOND TRENDY</a> </li>
+                                <li> <a href="">JEANS FOR JOY</a> </li>
+                            </ul>
+                        </li>
+                        <li class="cartegory-left-li"> <a href="">Nam</a>
+                            <ul>
+                                <li><a href="">Hàng Nữ</a></li>
+                                <li> <a href="">Nam</a> </li>
+                                <li> <a href="">BEYOND TRENDY</a> </li>
+                                <li> <a href="">JEANS FOR JOY</a> </li>
+                            </ul>
+                        </li>
+                        <li class="cartegory-left-li"> <a href="">Trẻ em</a>
+                            <ul>
+                                <li><a href="">Hàng Nữ</a></li>
+                                <li> <a href="">Nam</a> </li>
+                                <li> <a href="">BEYOND TRENDY</a> </li>
+                                <li> <a href="">JEANS FOR JOY</a> </li>
+                            </ul>
+                        </li>
+                        <li class="cartegory-left-li"> <a href="">Bộ Sưu Tập</a>
+                            <ul>
+                                <li><a href="">Hàng Nữ</a></li>
+                                <li> <a href="">Nam</a> </li>
+                                <li> <a href="">BEYOND TRENDY</a> </li>
+                                <li> <a href="">JEANS FOR JOY</a> </li>
+                            </ul>
+                        </li>
+                        <li class="cartegory-left-li"> <a href="">Nữ</a> </li>
+                        <li class="cartegory-left-li"> <a href="">Nữ</a> </li>
+                    </ul>
+                </div>
+                <div class="cartegory-right row">
+                    <div class="cartegory-right-top-item">
+                        <p>Hàng Nữ Mới Về</p>
+                    </div>
+                    <div class="cartegory-right-top-item">
+                        <button><span>Bộ lọc</span> <i class="fas fa-sort-down"></i></button>
+                    </div>
+                    <div class="cartegory-right-top-item">
+                        <select name="" id="">
+                            <option value="">Sắp xếp</option>
+                            <option value="">Giá cao đến thấp</option>
+                            <option value="">Giá thấp đến cao</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- app-containe -->
-    <section class="app-container">
-        <p>Tải ứng dụng IVY moda</p>
-        <div class="app-google">
-            <img src="img/appstore.png.png" alt="">
-            <img src="img/googleplay.png.png" alt="">
-        </div>
-        <p>Nhận bản tin IVY moda</p>
-        <input type="text" placeholder="Nhạp email của bạn...">
-    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- footer -->
     <div class="footer-top">
         <li><a href=""><img src="img/img-congthuong.png.png" alt=""></a></li>
@@ -106,18 +172,18 @@
 </body>
 <script>
     const header = document.querySelector("header")
-    window.addEventListener("scroll" , function() {
+    window.addEventListener("scroll", function () {
         x = window.pageYOffset
-        if(x >0) {
+        if (x > 0) {
             header.classList.add("sticky")
         }
         else {
             header.classList.remove("sticky")
 
         }
-    }) 
+    })
 
-    
+
 
 
 

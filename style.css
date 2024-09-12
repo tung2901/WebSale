@@ -25,9 +25,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    background: rgba(225, 225, 225, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
+header.sticky {
+    background: rgba(255, 255, 255, 1);
 
+}
+header:hover {
+    background: rgba(255, 255, 255, 1);
+}
 .logo {
     flex: 1;
 }
@@ -81,8 +87,22 @@ header {
 
 .others>li {
     padding: 0 12px;
+    position: relative;
 }
-
+.others>li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others >li:last-child::after {
+    display: none;
+}
 .others>li :first-child {
     position: relative;
 }
@@ -209,4 +229,51 @@ footer {
 }
 .footer-bottom {
     margin: 20px 0;
+}
+/* Cartegory */
+.cartegory {
+    padding: 100px 0 0;
+}
+.cartegory-top {
+    margin-bottom: 50px ;
+}
+.cartegory-top p {
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 12px;
+}
+.cartegory-left {
+    width: 20%;
+}
+.cartegory-right {
+    width: 80%;
+}
+.cartegory-right-top-item:first-child {
+    flex: 2;
+    font-size: 16px;
+    font-family: var(--main-text-font);
+    font-weight: bold;
+
+}
+.cartegory-right-top-item {
+    flex: 1;
+    padding: 0 12px;
+}
+.cartegory-right-top-item button {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+.cartegory-right-top-item select {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    cursor: pointer;
 }
