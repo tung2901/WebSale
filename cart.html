@@ -60,27 +60,67 @@
 
 
     </header>
-    <section id="Slider">
-        <div class="aspect-ratio-169">
-            <img src="./img/8f14e7856aef05f6b83e3a41ec7d7db5.webp.png" alt="">
-            <img src="./img/1d06b7d395e4e8a875357c290ac7cda5.png" alt="">
+
+
+<!------------------- cart -------------------->
+<section class="cart">
+<div class="container">
+    <div class="cart-top">
+        <div class="cart-top-cart">
+            <i class="fas fa-shopping-cart"></i>
         </div>
-        <div class="dot-container">
-            <div class="dot active"></div>
-            <div class="dot"></div>
+        <div class="cart-top-cart">
+            <i class="fas fa-map-marker-alt"></i>
         </div>
-    </section>
-    <!-- app-containe -->
-    <section class="app-container">
-        <p>Tải ứng dụng IVY moda</p>
-        <div class="app-google">
-            <img src="img/appstore.png.png" alt="">
-            <img src="img/googleplay.png.png" alt="">
+        <div class="cart-top-cart">
+            <i class="fas fa-money-check-alt"></i>
         </div>
-        <p>Nhận bản tin IVY moda</p>
-        <input type="text" placeholder="Nhạp email của bạn...">
-    </section>
-    <!-- footer -->
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------- footer -->
+<section class="footer">
     <div class="footer-top">
         <li><a href=""><img src="img/img-congthuong.png.png" alt=""></a></li>
         <li><a href=""></a>Liên hệ</li>
@@ -102,50 +142,5 @@
     <div class="footer-bottom">
         @Ivymoda All rights reserved
     </div>
-
+</section>
 </body>
-<script>
-    const header = document.querySelector("header")
-    window.addEventListener("scroll" , function() {
-        x = window.pageYOffset
-        if(x >0) {
-            header.classList.add("sticky")
-        }
-        else {
-            header.classList.remove("sticky")
-
-        }
-    }) 
-
-    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
-    const imgContainer = document.querySelector('.aspect-ratio-169')
-    const dotItem = document.querySelectorAll(".dot")
-    let imgNuber = imgPosition.length
-    let index = 0
-
-    imgPosition.forEach(function (image, index) {
-        image.style.left = index * 100 + "%"
-        dotItem[index].addEventListener("click", function () {
-            slider(index)
-        })
-    })
-    function imgSlide() {
-        index++;
-        console.log(index)
-        if (index >= imgNuber) { index = 0 }
-        slider(index)
-    }
-
-    function slider(index) {
-        imgContainer.style.left = "-" + index * 100 + "%"
-        const dotActive = document.querySelector('.active')
-        dotActive.classList.remove("active")
-        dotItem[index].classList.add("active")
-    }
-
-
-    setInterval(imgSlide, 5000)
-
-</script>
-
-</html>
