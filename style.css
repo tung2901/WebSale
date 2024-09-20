@@ -603,3 +603,7 @@ footer {
     font-size: 12px;
     text-decoration: line-through;
 }
+/* ------------------cart-----------------  */
+.cart {
+    padding: 100px;
+}
