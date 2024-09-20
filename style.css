@@ -605,5 +605,32 @@ footer {
 }
 /* ------------------cart-----------------  */
 .cart {
-    padding: 100px;
+    padding: 100px 0;
+}
+.cart-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-top {
+    height: 2px;
+    width: 70%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 100px;
+}
+.cart-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.cart-top-item i {
+    color: #ddd;
 }
