@@ -1,4 +1,10 @@
 <?php
+include "config.php";
+?>
+
+
+ 
+<?php
 Class Database{
 
 public $host = DB_HOST;
@@ -8,9 +14,6 @@ public $user = DB_USER;
 public $pass = DB_PASS;
 
 public $dbname = DB_NAME;
-
-
-
 
 
 
@@ -43,7 +46,7 @@ public function select($query) {
 
 $result = $this->link->query($query) or
 
-die($this->link->error._LINE_);
+die($this->link->error.__LINE__);
 
 if($result->num_rows > 0){
 
@@ -61,7 +64,7 @@ public function insert($query){
 
 $insert_row = $this->link->query($query) or
 
-die($this->link->error._LINE__);
+die($this->link->error.__LINE__);
 
 if($insert_row){
 
@@ -81,7 +84,7 @@ return false;
 public function update($query){
 
 $update_row = $this->link->query($query) or 
-die($this->link->error._LINE_);
+die($this->link->error.__LINE__);
 if($update_row){ 
     return $update_row;
 
