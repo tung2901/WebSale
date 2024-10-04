@@ -19,9 +19,6 @@ public $dbname = DB_NAME;
 
 
 
-
-
-
 public $link;
 
 public $error;
@@ -49,7 +46,7 @@ public function select($query) {
 
 $result = $this->link->query($query) or
 
-die($this->link->error._LINE_);
+die($this->link->error.__LINE__);
 
 if($result->num_rows > 0){
 
@@ -67,7 +64,7 @@ public function insert($query){
 
 $insert_row = $this->link->query($query) or
 
-die($this->link->error._LINE__);
+die($this->link->error.__LINE__);
 
 if($insert_row){
 
@@ -87,7 +84,7 @@ return false;
 public function update($query){
 
 $update_row = $this->link->query($query) or 
-die($this->link->error._LINE_);
+die($this->link->error.__LINE__);
 if($update_row){ 
     return $update_row;
 

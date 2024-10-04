@@ -1,5 +1,5 @@
 <?php
-include "database.php";
+include "./admin/database.php";
 ?>
 <?php
 class cartegory {
@@ -7,7 +7,7 @@ class cartegory {
 
   public function __construct()
   {
-    $this -> db = new Database
+    $this -> db = new Database();
   }
   public function insert_cartegory($cartegory_name){
     $query = "INSERT INTO tbl_cartegory (cartegory_name) VALUES ('$cartegory_name)";
