@@ -15,8 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="admin-content-right-cartegory_add">
         <h1>Thêm danh mục</h1>
         <form action="" method="POST">
-            <input name="cartegory_name" type="text" placeholder="Nhập tên danh mục">
-            <button type="submit">Thêm</button>
+        <select name="" id="">
+            <option value="">--Chọn Danh mục</option>
+            <option value="">Nam</option>
+            <option value="">Nữ</option>
+        </select>
+        <input name="cartegory_name" type="text" placeholder="Nhập tên danh mục">
+        <button type="submit">Thêm</button>
         </form>
     </div>
 </div>
