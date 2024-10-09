@@ -1,30 +1,48 @@
 <?php
 require "header.php";
 include "slider.php";
-include "class/cartegory_class.php";
+include "class/brand_class.php";
 ?>
 
 <?php
-$cartegory = new cartegory;
+$brand = new brand;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $cartegory_name = $_POST['cartegory_name'];
-    $insert_cartegory = $cartegory->insert_cartegory($cartegory_name);
+    $cartegory_id = $_POST['cartegory_id'];
+    $brand_name =$_POST['brand_name'];
+    $insert_brand = $brand->insert_brand($cartegory_id, $brand_name);
 }
 ?>
+<style>
+    select {
+        height: 30px;
+        width: 200px;
+    }
+</style>
 <div class="admin-content-right">
     <div class="admin-content-right-cartegory_add">
-        <h1>Thêm danh mục</h1>
+        <h1>Thêm loại sản phẩm</h1>
         <form action="" method="POST">
-        <select name="" id="">
-            <option value="">--Chọn Danh mục</option>
-            <option value="">Nam</option>
-            <option value="">Nữ</option>
-        </select>
-        <input name="cartegory_name" type="text" placeholder="Nhập tên danh mục">
-        <button type="submit">Thêm</button>
+            <select name="cartegory_id" id="">
+                <option value="#">--Chọn Danh mục</option>
+                <?php
+                $show_cartegory = $brand->show_cartegory();
+                if ($show_cartegory) {
+                    while ($rusult = $show_cartegory->fetch_assoc()) {
+
+                ?>
+                        <option value="<?php echo $rusult['cartegory_id'] ?>"><?php echo $rusult['cartegory_name'] ?></option>
+                <?php
+                    }
+                }
+                ?>
+                <option value="">Nữ</option>
+            </select> <br>
+            <input name="brand_name" type="text" placeholder="Nhập tên loại sản phẩm">
+            <button type="submit">Thêm</button>
         </form>
     </div>
 </div>
+
 </section>
 </body>
 
