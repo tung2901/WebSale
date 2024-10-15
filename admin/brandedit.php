@@ -13,10 +13,11 @@ if ($get_brand) {
     $resultA = $get_brand->fetch_assoc();
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $brand_id = $_POST['brand_id'];
+    $cartegory_id = $_POST['cartegory_id'];
     $brand_name = $_POST['brand_name'];
-    $insert_brand = $brand->insert_brand($brand_id, $brand_name);
+    $update_brand = $brand->update_brand($cartegory_id, $brand_name, $brand_id);
 }
+
 ?>
 <style>
     select {
@@ -43,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
                 ?>
-                <option value="">Nữ</option>
+                <!-- <option value="">Nữ</option> -->
             </select> <br>
             <input name="brand_name" type="text" placeholder="Nhập tên loại sản phẩm"
                 value="<?php echo $resultA['brand_name'] ?>">

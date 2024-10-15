@@ -15,7 +15,7 @@ class cartegory {
     return $result;
   }
   public function show_cartegory(){
-    $query = "SELECT * FROM tbl_cartegory ORDER BY cartegory_id DESC";
+    $query = "SELECT * FROM tbl_cartegory ORDER BY DESC";
     $result = $this ->db->select($query);
     return $result;
   }
