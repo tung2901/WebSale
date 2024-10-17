@@ -15,8 +15,8 @@
                 </li>
                 <li><a href="#">Sản phẩm</a>
                     <ul>
-                        <li><a href="">Thêm Danh Mục</a></li>
-                        <li><a href="">Danh sách danh mục</a></li>
+                        <li><a href="productadd.php">Thêm Danh Mục</a></li>
+                        <li><a href="productlist.php">Danh sách danh mục</a></li>
                     </ul>
                 </li>
             </ul>
