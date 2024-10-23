@@ -33,7 +33,7 @@ class product
     $product_price_new = $_POST['product_price_new'];
     $product_desc = $_POST['product_desc'];
     $product_img = $_FILES['product_img']['name'];
-    move_uploaded_file( $_FILES['product_img']['tmp_name'],"uploads/".$FILES['product_img']['name']);
+    //move_uploaded_file( $_FILES['product_img']['tmp_name'],"uploads/".$FILES['product_img']['name']);
     $query = "INSERT INTO tbl_product (
       product_name,
       cartegory_id,

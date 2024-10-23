@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // echo '<pre>'
     // echo print_r($_POST);
     // echo '</pre>'
-     $insert_product = $product ->insert_product($_POST, $_FILES);
+    //  $insert_product = $product ->insert_product($_POST, $_FILES);
 }
 ?>
 

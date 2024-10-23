@@ -6,8 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AdminStyle.css">
     <title>Danh mục sản phẩm</title>
+    <style> 
+         .admin-content-right-product_add h1 {
+    margin-bottom: 20px;
+ }
+ .admin-content-right-product_add input,select {
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 6px 0 12px;
+    padding-left: 12px;
+ }
+ .admin-content-right-product_add textarea {
+    display: block;
+    height: 200px;
+    width: 500px;
+    margin-bottom: 12px;
+    padding: 12px;
+ }
+ .admin-content-right-product_add button {
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: brown;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+ }
+ .admin-content-right-product_add button:hover {
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+ }
+    </style>
 </head>
- <body>
+
+<body>
     <header>
         <h1>TOP</h1>
     </header>
@@ -39,7 +75,7 @@
                 <h1>Thêm Sản phẩm</h1>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label for="">Nhập tên sản phẩm <span style="color: red;">*</span></label>
-                    <input type="text" >
+                    <input type="text">
                     <label for="">Chọn Danh mục <span style="color: red;">*</span></label>
                     <select name="" id="">
                         <option value="#">--chọn--</option>
@@ -53,11 +89,14 @@
                     <label for="">Giá khuyến mãi <span style="color: red;">*</span></label>
                     <input type="text">
                     <label for="">Mô tả sản phẩm <span style="color: red;">*</span></label>
-                    <textarea name="" id="" cols="30" rows="10" ></textarea>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
                     <label for="">Ảnh sản phẩm <span style="color: red;">*</span></label>
                     <input type="file">
                     <label for="">Ảnh Mô tả <span style="color: red;">*</span></label>
                     <input multiple type="file">
+
+
+                    
                     <button type="submit">Thêm</button>
                 </form>
             </div>
