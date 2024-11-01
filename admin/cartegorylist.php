@@ -21,7 +21,7 @@ include "class/cartegory_class.php";
 </style>
 <?php
 $cartegory = new cartegory;
-$show_cartegory = $cartegory->show_cartegory();
+$show_cartegory = $cartegory -> show_cartegory();
 ?>
 
 <div class="admin-content-right">

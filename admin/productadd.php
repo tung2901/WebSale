@@ -4,13 +4,10 @@ include "slider.php";
 include "class/product_class.php"
 ?>
 <?php
-$product = new brand;
+$product = new product;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // var_dump($_POST,$_FILES);
-    // echo '<pre>'
-    // echo print_r($_FILES['product_img_desc']['name']);
-    // echo '</pre>'
-     $insert_product = $product -> insert_product ($_POST, $_FILES);
+   
+     $insert_product = $product -> insert_product($_POST, $_FILES);
 }
 ?>
 
