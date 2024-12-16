@@ -2,7 +2,8 @@
 include "database.php";
 ?>
 <?php
-class product {
+class product
+{
   private $db;
 
   public function __construct()
@@ -24,7 +25,15 @@ class product {
     $result = $this->db->select($query);
     return $result;
   }
-  public function insert_product() {
+
+  public function show_brand_aja($cartegory_id)
+  {
+    $query = "SELECT * FROM tbl_brand WHERE brand_id = '$cartegory_id'";
+    $result = $this->db->select($query);
+    return $result;
+  }
+  public function insert_product()
+  {
     $product_name = $_POST['product_name'];
     $cartegory_id = $_POST['cartegory_id'];
     $brand_id = $_POST['brand_id'];
@@ -32,7 +41,7 @@ class product {
     $product_price_new = $_POST['product_price_new'];
     $product_desc = $_POST['product_desc'];
     $product_img = $_FILES['product_img']['name'];
-    move_uploaded_file( $_FILES['product_img']['tmp_name'],"uploads/".$_FILES['product_img']['name']);
+    move_uploaded_file($_FILES['product_img']['tmp_name'], "uploads/" . $_FILES['product_img']['name']);
     $query = "INSERT INTO tbl_product (
       product_name,
       cartegory_id,
