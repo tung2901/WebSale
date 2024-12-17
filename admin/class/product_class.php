@@ -26,7 +26,7 @@ class product
     return $result;
   }
 
-  public function show_brand_aja($cartegory_id)
+  public function show_brand_ajax($cartegory_id)
   {
     $query = "SELECT * FROM tbl_brand WHERE brand_id = '$cartegory_id'";
     $result = $this->db->select($query);
@@ -41,6 +41,18 @@ class product
     $product_price_new = $_POST['product_price_new'];
     $product_desc = $_POST['product_desc'];
     $product_img = $_FILES['product_img']['name'];
+    $filetarget = basename($_FILES['product_img']['name']);
+    // $filetype = strtolower(pathinfo($product_img))
+    // if (file_exists("uploads/$filetarget")) {
+    //   $alert = "File da ton tai";
+    //   return $alert;
+    // }
+    // else {
+
+    // }
+
+
+
     move_uploaded_file($_FILES['product_img']['tmp_name'], "uploads/" . $_FILES['product_img']['name']);
     $query = "INSERT INTO tbl_product (
       product_name,

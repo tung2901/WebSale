@@ -63,4 +63,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     CKEDITOR.replace('editor1');
 </script>
 
+
+<script>
+    $(document).ready(function() {
+        $("#cartegory_id").change(function() {
+            // alert($(this).val())
+            var x = $(this).val()
+            $.get("productadd_ajax.php",{caretegory_id:x},function(data){
+                $("brand_id").html(data)
+             })
+        })
+    })
+</script>
+
 </html>

@@ -14,9 +14,9 @@
             <img src="./img/logo.png.png" alt="">
         </div>
         <div class="menu">
-            <li><a href="">NỮ</a>
+            <li><a href="caretegory.html">NỮ</a>
                 <ul class="sub-menu">
-                    <li><a href="">Hàng mới</a></li>
+                    <li><a href="caretegory.html">Hàng mới</a></li>
                     <li><a href="">Collection</a></li>
                     <li><a href="">Áo</a>
                         <ul>
@@ -60,7 +60,7 @@
 
 
     </header>
-    <section id="Slider">
+    <section id="Slider" style="">
         <div class="aspect-ratio-169">
             <img src="./img/8f14e7856aef05f6b83e3a41ec7d7db5.webp.png" alt="">
             <img src="./img/1d06b7d395e4e8a875357c290ac7cda5.png" alt="">
@@ -105,46 +105,37 @@
 
 </body>
 <script>
-    const header = document.querySelector("header")
-    window.addEventListener("scroll" , function() {
-        x = window.pageYOffset
-        if(x >0) {
-            header.classList.add("sticky")
-        }
-        else {
-            header.classList.remove("sticky")
+  const images = document.querySelectorAll('.aspect-ratio-169 img');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
 
-        }
-    }) 
-
-    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
-    const imgContainer = document.querySelector('.aspect-ratio-169')
-    const dotItem = document.querySelectorAll(".dot")
-    let imgNuber = imgPosition.length
-    let index = 0
-
-    imgPosition.forEach(function (image, index) {
-        image.style.left = index * 100 + "%"
-        dotItem[index].addEventListener("click", function () {
-            slider(index)
-        })
-    })
-    function imgSlide() {
-        index++;
-        console.log(index)
-        if (index >= imgNuber) { index = 0 }
-        slider(index)
+    // Hàm chuyển đổi ảnh
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove('active');
+            dots[i].classList.remove('active');
+        });
+        images[index].classList.add('active');
+        dots[index].classList.add('active');
     }
 
-    function slider(index) {
-        imgContainer.style.left = "-" + index * 100 + "%"
-        const dotActive = document.querySelector('.active')
-        dotActive.classList.remove("active")
-        dotItem[index].classList.add("active")
-    }
+    // Xử lý click vào dot
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            showImage(currentIndex);
+        });
+    });
 
+    // Tự động chuyển ảnh mỗi 3 giây
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }, 3000);
 
-    setInterval(imgSlide, 5000)
+    // Hiển thị ảnh đầu tiên
+    showImage(currentIndex);
+
 
 </script>
 

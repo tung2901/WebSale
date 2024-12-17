@@ -6,6 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Cartegory Section */
+.cartegory {
+    margin: 30px 0;
+}
+
+.cartegory-top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #777;
+}
+
+.cartegory-left {
+    width: 20%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartegory-left ul li {
+    margin-bottom: 10px;
+}
+
+.cartegory-left a {
+    color: #333;
+    font-weight: bold;
+}
+
+.cartegory-left a:hover {
+    color: #d33b3b;
+}
+
+.cartegory-right {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.cartegory-right-top-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cartegory-right-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cartegory-right-content-item {
+    width: calc(25% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cartegory-right-content-item:hover {
+    transform: translateY(-10px);
+}
+
+.cartegory-right-content-item img {
+    width: 100%;
+    height: auto;
+}
+
+.cartegory-right-content-item h1 {
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+}
+
+.cartegory-right-content-item p {
+    color: #d33b3b;
+    font-weight: bold;
+    padding: 0 10px 10px;
+}
+    </style>
 </head>
 
 <body>
@@ -109,37 +191,25 @@
                         <li class="cartegory-left-li"> <a href="">Nữ</a> </li>
                     </ul>
                 </div>
-                <div class="cartegory-right row">
-                    <div class="cartegory-right-top-item">
-                        <p>Hàng Nữ Mới Về</p>
-                    </div>
-                    <div class="cartegory-right-top-item">
-                        <button><span>Bộ lọc</span> <i class="fas fa-sort-down"></i></button>
-                    </div>
-                    <div class="cartegory-right-top-item">
-                        <select name="" id="">
-                            <option value="">Sắp xếp</option>
-                            <option value="">Giá cao đến thấp</option>
-                            <option value="">Giá thấp đến cao</option>
-                        </select>
-                    </div>
 
                     <div class="cartegory-right-content row">
-                        <div class="cartegory-right-content-item">
-                            <img src="img/pic1.webp.png" alt="">
+                        <a href="product.html" class="cartegory-right-content-item">
+                            <img src="img/pic1.webp.png" alt="Product 1">
                             <h1>Đầm ôm họa tiết hoa MS 48T0033</h1>
                             <p>790.000 <sup>đ</sup></p>
-                        </div>
-                        <div class="cartegory-right-content-item">
-                            <img src="img/pic3.webp.png" alt="">
+                        </a>
+                        <!-- Product 2 -->
+                        <a href="product.html" class="cartegory-right-content-item">
+                            <img src="img/pic3.webp.png" alt="Product 2">
                             <h1>Đầm ôm họa tiết hoa MS 48T0033</h1>
                             <p>790.000 <sup>đ</sup></p>
-                        </div>
-                        <div class="cartegory-right-content-item">
-                            <img src="img/pic4.webp.png" alt="">
+                        </a>
+                        <!-- Product 3 -->
+                        <a href="product.html" class="cartegory-right-content-item">
+                            <img src="img/pic4.webp.png" alt="Product 3">
                             <h1>Đầm ôm họa tiết hoa MS 48T0033</h1>
                             <p>790.000 <sup>đ</sup></p>
-                        </div>
+                        </a>
                         <div class="cartegory-right-content-item">
                             <img src="img/pic2.webp.png" alt="">
                             <h1>Đầm ôm họa tiết hoa MS 48T0033</h1>
@@ -166,14 +236,7 @@
                             <p>790.000 <sup>đ</sup></p>
                         </div>
                     </div>
-                    <div class="cartegory-right-bottom row">
-                        <div class="cartegory-right-bottom-items">
-                            <p>Hiển thị 2 <span>|</span> 4 sản phẩm</p>
-                        </div>
-                        <div class="cartegory-right-bottom-items">
-                            <p> <span>&#171;</span>1 2 3 4 5<span>&#171;</span>Trang cuối</p>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
 

@@ -37,7 +37,7 @@ header.sticky {
 
 }
 
-header:hover {
+header {
     background: rgba(255, 255, 255, 1);
 }
 
@@ -63,7 +63,7 @@ header:hover {
 .sub-menu {
     position: absolute;
     width: 150px;
-    border: 1px solid #cccc;
+    border: 1px solid #0d0d0dcc;
     padding: 30px 0 10px 20px;
     visibility: hidden;
     top: 60px;
@@ -132,7 +132,253 @@ header:hover {
 #Slider {
     padding-bottom: 30px;
     border-bottom: 2px solid #000;
-    overflow: hidden;
+    overflow: hidden;/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Body và Tổng thể */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header .menu {
+    display: flex;
+    gap: 20px;
+}
+
+header .menu li {
+    position: relative;
+}
+
+header .menu a {
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .menu a:hover {
+    color: #0078ff;
+}
+
+/* Sub-menu */
+header .menu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+header .menu li:hover .sub-menu {
+    display: block;
+}
+
+header .menu .sub-menu li a {
+    display: block;
+    padding: 5px 20px;
+    color: #333;
+}
+
+header .others {
+    display: flex;
+    gap: 10px;
+}
+
+header .others img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Product Section */
+.product {
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-top {
+    display: flex;
+    gap: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.product-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.product-content-left {
+    flex: 2;
+}
+
+.product-content-left img {
+    width: 100%;
+}
+
+.product-content-right {
+    flex: 3;
+    padding-left: 30px;
+}
+
+.product-content-right h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.product-content-right p {
+    margin-bottom: 10px;
+}
+
+.product-content-right .product-content-right-product-price p {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-content-right-product-color-img img {
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.size span {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.size span:hover {
+    background: #0078ff;
+    color: #fff;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.product-content-right-product-button button {
+    padding: 10px 20px;
+    border: none;
+    background: #0078ff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.product-content-right-product-button button:hover {
+    background: #005bb5;
+}
+
+/* Related Products */
+.product-related {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-related-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-related .product-related-item {
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.product-related .product-related-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-related .product-related-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #0078ff;
+}
+
+.footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.footer-center {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    font-size: 12px;
+}
+
 }
 
 .aspect-ratio-169 {
@@ -389,6 +635,26 @@ footer {
     font-family: var(--main-text-font);
     margin: 0 12px;
     font-size: 12px;
+}
+.product-related.container {
+    display: flex;
+    /* Bật chế độ Flexbox */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    min-height: 100vh;
+    /* Chiều cao tối thiểu bằng 100% viewport */
+    margin: 0;
+    /* Xóa các margin mặc định */
+}
+
+.product-related-title {
+    display: flex;
+        /* Bật chế độ Flexbox */
+        justify-content: center;
+        /* Căn giữa theo chiều ngang */
+        align-items: center;
 }
 
 .product-content-left {
@@ -791,3 +1057,357 @@ footer {
     border: 1px solid brown;
     color: brown;
  }
+ .product-related {
+    margin: 40px 0;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-related-item {
+    flex: 1 1 calc(25% - 20px); /* 4 items trên 1 hàng */
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.product-related-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-related-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-related-item h1 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-related-item p {
+    font-size: 14px;
+    color: #d0021b;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.product-related-item sup {
+    font-size: 10px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Body và Tổng thể */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header .menu {
+    display: flex;
+    gap: 20px;
+}
+
+header .menu li {
+    position: relative;
+}
+
+header .menu a {
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .menu a:hover {
+    color: #0078ff;
+}
+
+/* Sub-menu */
+header .menu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+header .menu li:hover .sub-menu {
+    display: block;
+}
+
+header .menu .sub-menu li a {
+    display: block;
+    padding: 5px 20px;
+    color: #333;
+}
+
+header .others {
+    display: flex;
+    gap: 10px;
+}
+
+header .others img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Product Section */
+.product {
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-top {
+    display: flex;
+    gap: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.product-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.product-content-left {
+    flex: 2;
+}
+
+.product-content-left img {
+    width: 100%;
+}
+
+.product-content-right {
+    flex: 3;
+    padding-left: 30px;
+}
+
+.product-content-right h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.product-content-right p {
+    margin-bottom: 10px;
+}
+
+.product-content-right .product-content-right-product-price p {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-content-right-product-color-img img {
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.size span {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.size span:hover {
+    background: #0078ff;
+    color: #fff;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.product-content-right-product-button button {
+    padding: 10px 20px;
+    border: none;
+    background: #0078ff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.product-content-right-product-button button:hover {
+    background: #005bb5;
+}
+
+/* Related Products */
+.product-related {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-related-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-related .product-related-item {
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.product-related .product-related-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-related .product-related-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #0078ff;
+}
+
+.footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.footer-center {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    font-size: 12px;
+}
+Slider {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+    /* Reset CSS */}
+
+/* Định dạng Slider */
+#Slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.aspect-ratio-169 {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* Tỉ lệ khung hình 16:9 */
+}
+
+.aspect-ratio-169 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
+    display: none;
+    /* Ẩn tất cả ảnh mặc định */
+}
+
+.aspect-ratio-169 img.active {
+    display: block;
+    /* Hiển thị ảnh đang active */
+}
+
+/* Dot container */
+.dot-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+    /* Dot active nổi bật */
+}
